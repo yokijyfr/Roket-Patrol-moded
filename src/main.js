@@ -11,6 +11,8 @@ let borderPadding = borderUISize / 3;
 
 let keyF, keyR, keyLEFT, keyRIGHT, keyA, keyD, keySPACE;
 
+// Yuanzheng Ji, Rocket Patrol moded, 2022/4/18, 10 hours used.
+
 
 //point breakdown (100)
 //1. Create a new spaceship type (w/ new artwork) that's smaller, moves faster, and is worth more points (20)
