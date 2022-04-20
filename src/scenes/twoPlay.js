@@ -23,7 +23,7 @@ class twoPlay extends Phaser.Scene {
         this.add.rectangle(game.config.width - borderUISize, 0, borderUISize, game.config.height, 0xFFFFFF).setOrigin(0, 0);
 
         this.p1Rocket = new Rocket(this, game.config.width/4, game.config.height - borderUISize - borderPadding, 'rocket').setOrigin(0.5, 0);
-        this.p2Rocket = new Rocket(this, game.config.width*3/4, game.config.height - borderUISize - borderPadding, 'rocket').setOrigin(0.5, 0);
+        this.p2Rocket = new Rocket2(this, game.config.width*3/4, game.config.height - borderUISize - borderPadding, 'rocket').setOrigin(0.5, 0);
 
         this.ship01 = new Spaceship(this, game.config.width + borderUISize*6, borderUISize*4, 'spaceship', 0, 30).setOrigin(0, 0);
         this.ship02 = new Spaceship(this, game.config.width + borderUISize*3, borderUISize*5 + borderPadding*2, 'spaceship', 0, 20).setOrigin(0,0);
@@ -32,7 +32,7 @@ class twoPlay extends Phaser.Scene {
         
         keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
         keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
-        keyP = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.P);
+        keySPACE = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
         keyF = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.F);
         keyR = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.R);
         keyLEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
@@ -149,7 +149,7 @@ class twoPlay extends Phaser.Scene {
 
         this.p1Score += ship.points;
         this.scoreLeft.text = this.p1Score;
-        this.gameTimer += 3000;
+        this.gameTimer += 1000;
 
         this.sound.play('sfx_explosion');
     }
